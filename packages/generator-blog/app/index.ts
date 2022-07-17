@@ -1,4 +1,4 @@
-import * as dateFormat from 'dateformat'
+import dateFormat from 'dateformat'
 import * as fs from 'fs-extra'
 import * as path from 'path'
 import slugify from 'slugify'
