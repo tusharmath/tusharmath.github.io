@@ -16,18 +16,18 @@ const fetch = async <T = unknown>(
   return response
 }
 const DEFAULT_PARAMS: AxiosRequestConfig = {
-  timeout: process.env.GH_TOKEN === undefined ? 1e2 : 1e4
+  timeout: process.env.GH_TOKEN === undefined ? 1e2 : 1e4,
 }
 const requestParams = (): AxiosRequestConfig =>
   typeof process.env.GH_TOKEN === 'string'
     ? {
         ...DEFAULT_PARAMS,
         headers: {
-          authorization: `bearer ${process.env.GH_TOKEN}`
-        }
+          authorization: `bearer ${process.env.GH_TOKEN}`,
+        },
       }
     : {
-        ...DEFAULT_PARAMS
+        ...DEFAULT_PARAMS,
       }
 const requestPage = async (username: string, page: number) =>
   fetch<GithubRepos>(
@@ -46,11 +46,11 @@ const getGitHubData = async (username: string) => {
   const repos = R.pipe(
     pages,
     R.flatMap(R.prop('data')),
-    R.filter(i => !i.fork && i.description !== null),
-    R.sortBy(R.prop('created_at'))
+    R.filter((i) => !i.fork && i.description !== null),
+    R.sortBy((i) => i.created_at)
   ).reverse()
 
-  const popular = repos.filter(i => i.watchers_count + i.stargazers_count > 0)
+  const popular = repos.filter((i) => i.watchers_count + i.stargazers_count > 0)
 
   return {repos, popular}
 }
@@ -61,7 +61,7 @@ export = (env: Wintersmith, callback: CB) => {
     callback()
   } else {
     getGitHubData(env.config.github)
-      .then(data => {
+      .then((data) => {
         env.helpers.github = data
         callback()
       })
