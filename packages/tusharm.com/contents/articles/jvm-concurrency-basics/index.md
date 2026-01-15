@@ -167,11 +167,34 @@ Also, a release can be called by any thread and not just the thread that called 
 
 **What is a _conditionVariable_ ?**
 
-ConditionVariables are useful for implementing some sort of polling mechanisms on a variable which is updated by multiple threads. You can create a new condition variable on a ReentrantLock by calling `newCondition` on it.
+ConditionVariables are useful for implementing polling mechanisms on a variable which is updated by multiple threads. You can create a new condition variable on a ReentrantLock by calling `newCondition` on it.
 
 ```scala
 val lock = new ReentrantLock()
 val cond = lock.newCondition()
+var count = 10
+
+
+// a thread that waits until the count becomes zero
+val thread1 = new Thread(() => {
+   
+
+   while(true) {
+      lock.lock
+      if (count == 0) {
+         println("Count is zero")
+         lock.unlock
+         true
+      } else {
+         cond.await
+      }
+   }
+
+})
+
+// a thread that keeps reducing the count
+
+
 ```
 
 **How does _await_ work in a condition variable?**
