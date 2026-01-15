@@ -2,7 +2,7 @@ import dateFormat from 'dateformat'
 import * as fs from 'fs-extra'
 import * as path from 'path'
 import slugify from 'slugify'
-import * as Generator from 'yeoman-generator'
+import Generator from 'yeoman-generator'
 
 interface IUserInput {
   date: string
@@ -26,7 +26,7 @@ export = class BlogGenerator extends Generator {
   }
 
   public async prompting(): Promise<void> {
-    this.answers = await this.prompt([
+    this.answers = await this.prompt<IUserInput>([
       {
         type: 'input',
         name: 'title',
@@ -37,7 +37,7 @@ export = class BlogGenerator extends Generator {
         type: 'input',
         name: 'slug',
         message: 'Slug',
-        default: (a: {title: string}) => slugify(a.title).toLowerCase(),
+        default: (a: Partial<IUserInput>) => a.title ? slugify(a.title).toLowerCase() : '',
       },
       {
         type: 'input',

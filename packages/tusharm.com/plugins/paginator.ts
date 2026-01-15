@@ -120,7 +120,10 @@ const isVisible = (i: MarkdownPage) =>
 
 export = (env: Wintersmith, callback: CB) => {
   // Assign defaults any option not set in the config file
-  const options: IOptions = R.mergeAll([DEFAULT_OPTIONS, env.config.paginator])
+  const options: IOptions = {
+    ...DEFAULT_OPTIONS,
+    ...(env.config.paginator as Partial<IOptions>)
+  }
 
   const paginator = createPage(env, options)
 
