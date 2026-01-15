@@ -30,6 +30,7 @@ const getArticles = (options: IOptions) => (
 ) => {
   const r = contents[options.articles]._.directories
     .map((item) => item.index)
+    .filter((item) => item !== undefined) // Filter out directories without index
     .filter(matchesCategory(category))
     .sort((a, b) => b.date - a.date)
 
