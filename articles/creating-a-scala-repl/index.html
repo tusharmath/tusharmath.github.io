@@ -11,27 +11,38 @@ var s = document.getElementsByTagName('script')[0];
 s.parentNode.insertBefore(ga, s);
 })();
 
-</script></head><body class="article-detail"><header class="header"><div class="top-nav"><div class="red-line"></div><ul><li><a href="/">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/archive.html">Archives</a></li><li><a href="/about.html">About Me</a></li></ul></div><div class="content-wrap"><h1>Creating a Scala REPL</h1><p class="author">by <span class="author"></span>Tushar Mathur</p></div></header><div id="content"><div class="content-wrap"><article class="article"><section class="content"><p>The best way to learn a new language is to create a simple file for that programming language and keep running it in watch mode. I personally use <code>watch</code> and <a href="https://code.visualstudio.com/">VSCode</a> when I want to quickly prototype something. <code>watch</code> helps me run that code continuously as I type and provides me with instant feedback on the terminal. I have found this technique really helpful in the past specially while learning something<span class="widont">&nbsp;</span>new.</p>
-<hr>
-<p>Here are the steps to setup a basic scala <code>REPL</code> on mac.</p>
-<h1 id="create-a-scala-file">Create a .scala<span class="widont">&nbsp;</span>File</h1>
-<p>Create a file named <code>main.scala</code> —</p>
-<pre><code class="language-scala"><span class="comment">// main.scala</span>
-
-<span class="class"><span class="keyword">object</span> <span class="title">Main</span> <span class="keyword">extends</span> <span class="title">App</span> </span>{
-  println(<span class="string">"Customary Hello World!"</span>)
-}</code></pre>
-<h1 id="install-watch">Install Watch</h1>
-<p><code>watch</code> is a great <span class="caps">OSX</span> utility that keeps running a command every few<span class="widont">&nbsp;</span>seconds.</p>
-<pre><code>brew install watch</code></pre><h1 id="watch-run">Watch <span class="amp">&amp;</span> Run</h1>
-<p>Setup the watch command to keep running your code in the background<span class="widont">&nbsp;</span>—</p>
-<p><strong>Execute:</strong></p>
-<pre><code>watch scala main.scala</code></pre><p><strong>Compile Only:</strong></p>
-<pre><code>watch scalac main.scala</code></pre><h1 id="using-sbt">Using <span class="caps">SBT</span></h1>
-<p>[<span class="caps">SBT</span>] provides a an alternative way to watch and run scala<span class="widont">&nbsp;</span>code.</p>
+</script></head><body class="article-detail"><header class="header"><div class="top-nav"><div class="red-line"></div><ul><li><a href="/">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/archive.html">Archives</a></li><li><a href="/about.html">About Me</a></li></ul></div><div class="content-wrap"><h1>Creating a Scala REPL</h1><p class="author">by <span class="author"></span>Tushar Mathur</p></div></header><div id="content"><div class="content-wrap"><article class="article"><section class="content"><p>The best way for me to learn a new language is to create a simple file for that programming language and keep running it in watch mode. Here are some ways you can achieve this<span class="widont">&nbsp;</span>—</p>
+<h3 id="option-1-simple-watch">Option 1, Simple<span class="widont">&nbsp;</span>watch</h3>
+<pre><code class="language-bash">watch scala Program.scala</code></pre>
+<h4 id="pros">Pros</h4>
+<ul>
+<li>Simple setup.</li>
+</ul>
+<h4 id="cons">Cons</h4>
+<ul>
+<li>Doesn’t work with 3<span class="ord">rd</span> party<span class="widont">&nbsp;</span>dependencies/libraries.</li>
+<li>Very slow.</li>
+<li>Doesn’t work with multiple<span class="widont">&nbsp;</span>files.</li>
+</ul>
+<h3 id="option-2-using-sbt">Option 2, Using <a href="https://www.scala-sbt.org/"><span class="caps">SBT</span></a></h3>
+<p><span class="caps">SBT</span> provides a standard way to watch and run scala code. Though this is designed for larger projects, it can be used on projects with one<span class="widont">&nbsp;</span>file.</p>
+<p><strong>Directory Structure</strong></p>
+<pre><code>|-src
+  |-main
+    |-scala
+      |-Main.scala
+build.sbt</code></pre><p>Run the following command on the<span class="widont">&nbsp;</span>console.</p>
 <pre><code class="language-bash">sbt ~run</code></pre>
-<p>This way the <code>main.scala</code> is only executed when the file actually changes. The disadvantage of this approach is that you can not pass a random file<span class="widont">&nbsp;</span>path.</p>
+<p><strong>Pros</strong></p>
+<ol>
+<li>Standard technique to run any scala<span class="widont">&nbsp;</span>projects.</li>
+<li>Supports adding a library
+This way the <code>Main.scala</code> is only executed when the file actually changes. The disadvantage of this approach is that you can not pass a random file<span class="widont">&nbsp;</span>path.</li>
+</ol>
 <p>Also checkout <strong><a href="https://repl.it/">repl.it</a></strong> if you don’t want to setup all this stuff locally. Unfortunately at the time of writing this blog, scala wasn’t<span class="widont">&nbsp;</span>supported.</p>
+<p>There is a bit of additional bootstrapping that is required with <span class="caps">SBT</span>. The advantage is that you can easily add dependencies into the project thru <code>build.sbt</code> if you want to play with<span class="widont">&nbsp;</span>them.</p>
+<h3 id="option-3-using-ammonite">Option 3, Using <a href="http://ammonite.io">Ammonite</a></h3>
+<p>This is possibly the best alternative out<span class="widont">&nbsp;</span>there!</p>
 </section></article></div></div><footer><div class="content-wrap"><div class="nav"><a href="/">« Full blog</a><a href="https://github.com/tusharmath/tusharmath.github.io/edit/develop/packages/tusharm.com/contents/articles/creating-a-scala-repl//index.md">Edit »</a></div><div id="disqus_thread"></div><script>/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 var disqus_shortname = 'tusharmcom'; // required: replace example with your forum shortname
 /* * * DON'T EDIT BELOW THIS LINE * * */

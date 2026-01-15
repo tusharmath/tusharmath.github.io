@@ -103,9 +103,32 @@ You can call release as many number of times as you want and with each release, 
 Also, a release can be called by any thread and not just the thread that called the lock<span class="widont">&nbsp;</span>method.</p>
 <h1 id="condition-variable">Condition Variable</h1>
 <p><strong>What is a <em>conditionVariable</em><span class="widont">&nbsp;</span>?</strong></p>
-<p>ConditionVariables are useful for implementing some sort of polling mechanisms on a variable which is updated by multiple threads. You can create a new condition variable on a ReentrantLock by calling <code>newCondition</code> on it.</p>
+<p>ConditionVariables are useful for implementing polling mechanisms on a variable which is updated by multiple threads. You can create a new condition variable on a ReentrantLock by calling <code>newCondition</code> on it.</p>
 <pre><code class="language-scala"><span class="keyword">val</span> lock = <span class="keyword">new</span> <span class="type">ReentrantLock</span>()
-<span class="keyword">val</span> cond = lock.newCondition()</code></pre>
+<span class="keyword">val</span> cond = lock.newCondition()
+<span class="keyword">var</span> count = <span class="number">10</span>
+
+
+<span class="comment">// a thread that waits until the count becomes zero</span>
+<span class="keyword">val</span> thread1 = <span class="keyword">new</span> <span class="type">Thread</span>(() =&gt; {
+
+
+   <span class="keyword">while</span>(<span class="literal">true</span>) {
+      lock.lock
+      <span class="keyword">if</span> (count == <span class="number">0</span>) {
+         println(<span class="string">"Count is zero"</span>)
+         lock.unlock
+         <span class="literal">true</span>
+      } <span class="keyword">else</span> {
+         cond.await
+      }
+   }
+
+})
+
+<span class="comment">// a thread that keeps reducing the count</span>
+
+</code></pre>
 <p><strong>How does <em>await</em> work in a condition<span class="widont">&nbsp;</span>variable?</strong></p>
 <p>The await method on a condition variable will immediately perform two operations<span class="widont">&nbsp;</span>—</p>
 <ol>
