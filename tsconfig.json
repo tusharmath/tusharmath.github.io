@@ -9,8 +9,11 @@
     "strictPropertyInitialization": true,
     "strictNullChecks": true,
     "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "types": [],
     "plugins": [
       {"name": "typescript-tslint-plugin", "configFile": "./tslint.json"}
     ]
-  }
+  },
+  "exclude": ["node_modules"]
 }
