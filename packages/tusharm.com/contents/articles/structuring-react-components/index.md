@@ -1,10 +1,9 @@
-```metadata
+---
 title: structuring react components
 
 date: 2016-01-16
 template: article.pug
-```
-
+---
 Rather than making one huge component do everything, have smaller more specialized ones that perform one thing at a time.
 
 ---

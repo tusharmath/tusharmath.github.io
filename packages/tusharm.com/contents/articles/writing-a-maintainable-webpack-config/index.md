@@ -1,10 +1,9 @@
-```metadata
+---
 title: Writing a maintainable webpack config
 
 date: 2018-08-02
 template: article.pug
-```
-
+---
 Over a period of time webpack configs usually become really large and hard to maintain. In one of my cases `webpack.config.js` had become more than **1000** lines!
 In this blog I am going to talk about how to write **composable** webpack configs that are easy to read and maintainable.
 

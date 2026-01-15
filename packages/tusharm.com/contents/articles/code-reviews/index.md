@@ -1,10 +1,9 @@
-```metadata
+---
 title: Lessons learnt from driving a healthy code review culture in organizations
 date: 2020-Dec-16
 template: article.pug
 category: article
-```
-
+---
 Code reviews in organizations are quite different and probably more challenging in my opinion than typical open-source projects.
 
 ## 🥴 Challenges

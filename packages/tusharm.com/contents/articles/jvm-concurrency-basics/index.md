@@ -1,11 +1,10 @@
-```metadata
+---
 title: JVM Concurrency Basics
 date: 2022-Jul-15
 template: article.pug
 hide: false
 category: article
-```
-
+---
 Here are some of my notes on JVM multithreading and concurrency course on [udemy] in a Q & A format. The course is a good start for people who want to write high-performance code on the JVM and are trying to wrap their heads around the available concurrency primitives.
 
 _PS: Feel free to correct and add more details by opening a PR on [github]._

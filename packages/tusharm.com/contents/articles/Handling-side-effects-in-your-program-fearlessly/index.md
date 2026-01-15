@@ -1,11 +1,10 @@
-```metadata
+---
 title: Handling side-effects in your program fearlessly
 date: 2019-May-01
 template: article.pug
 hide: true
 category: article
-```
-
+---
 # What is an effect?
 
 In software, a program is categorized as "effectful" if it needs to interact with the external environment for it to complete its purpose. For example `console.log` in JS, actually paints pixels on the screen and is thus an effectful function. Similarly using `fetch` to make an http call in the browser is a side-effect because for it to run it needs access to network. Simpler code pieces such as `new Date()` which returns the current date/time is also effectful because it relies on the system's clock.

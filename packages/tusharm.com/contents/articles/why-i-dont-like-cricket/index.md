@@ -1,10 +1,9 @@
-```metadata
+---
 title: Why I don't like cricket?
 date: 2013-06-11
 template: article.pug
 hide: true
-```
-
+---
 Cricket is a very popular sport here in India. Even though Hockey is our national game, cricket is more followed and idolized. People are so sentimental about cricket that they don't go to offices, some private companies have half days or sometimes a full day off when India is playing. People go crazy when India has a match with Pakistan - a country with whom we have had three wars in the past. I don't have the exact figures but I am pretty sure that the matches have always militated against India's GDP for that particular day :P
 
 My grandfather was a [Ranji](http://en.wikipedia.org/wiki/Ranji_Trophy) player and my mother was in the state cricket team representing Rajasthan. Yet I was not that great in cricket, I was bad, really bad. I was bad in basketball and football too and now when I see this pattern it seems like I was bad in every team sport, probably I am not a team player _(more about that later)_. I wasn't bad in badminton, squash and swimming, I loved games where I could perform by my self which is a typical characteristic of an introvert when I had my last introspection _(by the way introverts are not shy people, see [this](http://www.youtube.com/watch?v=c0KYU2j0TM4))_

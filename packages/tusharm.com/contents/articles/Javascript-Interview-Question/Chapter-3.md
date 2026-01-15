@@ -1,10 +1,9 @@
-```metadata
+---
 title: Javascript Interview Questions
 
 date: 2013-08-24
 template: article.pug
-```
-
+---
 # Chapter 3 - Types, Values and Variables
 
 1. What are the different categories of objects in Javascript?

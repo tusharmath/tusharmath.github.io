@@ -1,10 +1,9 @@
-```metadata
+---
 title: Setting up MOSH on Koding.io
 
 date: 2015-apr-19
 template: article.pug
-```
-
+---
 Using a remote server for development is so much cooler for obvious reasons. Using MOSH on top of it naturally makes the experience much better.
 
 ### [Koding.com](https://koding.com) + [MOSH](https://mosh.mit.edu/#getting) = _Ecstasy_

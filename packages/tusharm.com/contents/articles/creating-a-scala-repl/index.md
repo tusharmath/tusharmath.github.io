@@ -1,10 +1,9 @@
-```metadata
+---
 title: Creating a Scala REPL
 hide: true
 date: 2018-08-21
 template: article.pug
-```
-
+---
 The best way for me to learn a new language is to create a simple file for that programming language and keep running it in watch mode. Here are some ways you can achieve this —
 
 ### Option 1, Simple watch

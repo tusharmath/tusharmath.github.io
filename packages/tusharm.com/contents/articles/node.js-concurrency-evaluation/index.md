@@ -1,11 +1,10 @@
-```metadata
+---
 title: node.js concurrency evaluation
 
 date: 2015-12-14
 category: project
 template: article.pug
-```
-
+---
 I have been using node.js for a decent amount of time now and I had this hypothesis which I needed to validate —
 
 > For a node.js server running on multi core system, if I flood the server with `n` concurrent requests, to compute something expensive, it would handle the traffic better if the computation can be chunked in such a way that the server can compute those `n` computations, concurrently.

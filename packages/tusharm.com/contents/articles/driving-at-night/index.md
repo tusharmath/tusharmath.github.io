@@ -1,10 +1,9 @@
-```metadata
+---
 title: Misconceptions about driving at night
 
 date: 2013-06-03
 template: article.pug
-```
-
+---
 The most common misconception that people have about driving at night is -
 
 > The chances of having an accident increase with decrease in intensity of light

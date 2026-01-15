@@ -1,11 +1,10 @@
-```metadata
+---
 title: Removing jamf profiles from Mac OS
 date: 2021-Jan-07
 template: article.pug
 hide: true
 category: article
-```
-
+---
 I have found [jamf] to be too interfering and personally very frustrating while installing softwares and changing some system-level settings on my mac. I prefer keeping it disabled whenever possible. Here are the steps I follow that have always worked for me
 
 1. Begin with restarting your computer.
