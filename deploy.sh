@@ -3,7 +3,7 @@ SOURCE_BRANCH="develop"
 ORG="tusharmath"
 REPO="tusharmath.github.io"
 CONTENT_DIR="packages/tusharm.com/bin"
-CUSTOM_DOMAIN="tusharm.com"
+CUSTOM_DOMAIN="tusharmath.dev"
 
 rm -rf $CONTENT_DIR
 mkdir -p $CONTENT_DIR

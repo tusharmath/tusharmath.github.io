@@ -14,4 +14,4 @@ Whenever I want to create a new web application that worked offline, I just fork
 
 Here are the links if you want to know more about the project —
 
-[Source](https://github.com/tusharmath/web-offline-seed) & [Demo Application](http://tusharm.com/web-offline-seed)
+[Source](https://github.com/tusharmath/web-offline-seed) & [Demo Application](https://tusharmath.dev/web-offline-seed)

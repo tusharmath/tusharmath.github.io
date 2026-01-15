@@ -33,4 +33,4 @@ It took a lot of perseverance in getting the recipe just right. So here are some
 
 **Update:** Checkout my blog post on [the final recipe].
 
-[the final recipe]: https://tusharm.com/articles/chicken-biryani-final-recipe/
+[the final recipe]: https://tusharmath.dev/articles/chicken-biryani-final-recipe/

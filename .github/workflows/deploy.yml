@@ -21,3 +21,4 @@ jobs:
           BRANCH: master # The branch the action should deploy to.
           FOLDER: ./packages/tusharm.com/bin # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
+          CNAME: tusharmath.dev # Custom domain for GitHub Pages
